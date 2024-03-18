@@ -1,10 +1,11 @@
 from pydantic import BaseModel
+from pydantic.datetime_parse import date
 
 
 class CoursesBase(BaseModel):
-    name: str
-    period: int
-    price: int
+    student_id: int
+    check: bool
+    day: date
 
 
 class CoursesCreate(CoursesBase):
